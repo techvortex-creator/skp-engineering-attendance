@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="256" cy="256" r="220" fill="#111111"/>
+  <circle cx="256" cy="256" r="205" stroke="#F4F4F4" stroke-width="10"/>
+  <path d="M128 262L208 184L256 220L320 160L384 262H128Z" fill="#F5F5F5"/>
+  <path d="M170 276H342L302 322H210L170 276Z" fill="#F5F5F5"/>
+  <path d="M100 288H412V344H100V288Z" fill="#111111"/>
+  <path d="M148 282L196 238L236 270H148V282Z" fill="#101010"/>
+  <path d="M316 282L364 238L404 270H316V282Z" fill="#101010"/>
+  <path d="M172 312H340V330H172V312Z" fill="#F4F4F4"/>
+  <path d="M144 344H368L330 384H182L144 344Z" fill="#F4F4F4"/>
+  <path d="M216 158L256 116L296 158H216Z" fill="#F5F5F5"/>
+  <circle cx="256" cy="110" r="14" fill="#F5F5F5"/>
+  <path d="M256 58L266 92H296L272 112L282 146L256 126L230 146L240 112L216 92H246L256 58Z" fill="#F5F5F5"/>
+  <text x="256" y="462" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#111111">SKP</text>
+  <text x="256" y="398" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#F5F5F5">ENGINEERING</text>
+  <text x="256" y="436" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#F5F5F5">ATTENDANCE</text>
+</svg>
