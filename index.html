@@ -6,12 +6,12 @@
     <title>SKP Engineering Attendance</title>
     <meta
       name="description"
-      content="SKP Engineering Attendance - secure daily attendance tracking for students, faculty, and administrators."
+      content="SKP Engineering Attendance - secure attendance tracking for students, faculty, and administration."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,20 +19,25 @@
   <body>
     <header class="topbar">
       <div class="container nav-wrap">
-        <div class="brand">
+        <a href="index.html" class="brand" aria-label="SKP Engineering Attendance home">
           <img src="logo.svg" alt="SKP Engineering Attendance logo" class="brand-logo" />
           <div>
-            <p class="brand-kicker">SKP Group of Institutions</p>
+            <span class="brand-kicker">SKP Group of Institutions</span>
             <h1>SKP ENGINEERING ATTENDANCE</h1>
           </div>
-        </div>
-        <nav class="main-nav">
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
           <a href="#features">Features</a>
           <a href="#dashboard">Dashboard</a>
           <a href="#leave">Leave</a>
           <a href="#contact">Contact</a>
         </nav>
-        <button class="btn btn-primary" id="loginShortcut">Admin Login</button>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary">Login</a>
+          <a href="admin.html" class="btn btn-primary">Admin Panel</a>
+        </div>
       </div>
     </header>
 
@@ -41,74 +46,77 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <span class="eyebrow">Professional campus attendance management</span>
-            <h2>Daily attendance made secure, transparent, and easy.</h2>
+            <h2>Daily attendance made secure, transparent, and efficient.</h2>
             <p>
-              Track every class, monitor percentage in real time, send leave alerts to parents,
-              and manage faculty approvals with a secure attendance dashboard built for modern institutions.
+              Track every period, view attendance percentage instantly, notify parents on leave,
+              and streamline leave approval for faculty and admin with a secure academic portal.
             </p>
             <div class="cta-row">
-              <button class="btn btn-primary" id="exploreDashboard">Open Dashboard</button>
-              <button class="btn btn-ghost" id="viewReports">View Reports</button>
+              <a href="login.html" class="btn btn-primary">Access Portal</a>
+              <a href="#dashboard" class="btn btn-ghost">View Dashboard</a>
             </div>
+
             <ul class="hero-points">
               <li>Period-wise attendance tracking</li>
-              <li>Parent notification on leave</li>
-              <li>Faculty and admin approval workflows</li>
+              <li>Leave request workflow</li>
+              <li>Parent message alerts</li>
             </ul>
           </div>
 
           <div class="hero-panel">
-            <div class="panel-card login-panel">
-              <div class="panel-top">
+            <div class="panel-card login-mini">
+              <div class="panel-head">
                 <span class="status-dot"></span>
                 <span>Secure Access Portal</span>
               </div>
-              <h3>Login</h3>
-              <div class="auth-tabs">
-                <button class="auth-tab active" data-role="admin">Admin</button>
-                <button class="auth-tab" data-role="faculty">Faculty</button>
-                <button class="auth-tab" data-role="student">Student</button>
+              <h3>Faculty / Student / Admin</h3>
+              <div class="mini-login-grid">
+                <div>
+                  <strong>Department:</strong>
+                  <p>CSE, ECE, EEE, MECH</p>
+                </div>
+                <div>
+                  <strong>Roles:</strong>
+                  <p>Admin, Faculty, Student</p>
+                </div>
               </div>
-
-              <label>
-                <span>Email or Institute ID</span>
-                <input id="loginUser" type="text" placeholder="admin@skp.edu.in" />
-              </label>
-              <label>
-                <span>Password</span>
-                <input id="loginPassword" type="password" placeholder="••••••••" />
-              </label>
-              <button class="btn btn-primary full" id="signInBtn">Sign In Securely</button>
-              <button class="btn btn-secondary full google-btn" id="gmailLoginBtn">
-                Continue with Gmail
-              </button>
-              <p class="tiny-note">JWT secure session • Role-based authorization • Audit logs enabled</p>
+              <div class="mini-form">
+                <label>
+                  <span>Email or Institute ID</span>
+                  <input type="text" value="admin@skpengineering.edu.in" />
+                </label>
+                <label>
+                  <span>Password</span>
+                  <input type="password" value="password123" />
+                </label>
+                <a href="dashboard.html" class="btn btn-primary full">Login Securely</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="stats-section" id="features">
+      <section class="stats-strip" id="features">
         <div class="container stats-grid">
           <article class="stat-card">
-            <span class="stat-label">Active Students</span>
+            <span class="stat-label">Students</span>
             <strong>4,820</strong>
-            <small>Across 18 departments</small>
+            <small>Across departments</small>
           </article>
           <article class="stat-card">
-            <span class="stat-label">Faculty Members</span>
+            <span class="stat-label">Faculty</span>
             <strong>160</strong>
-            <small>Across engineering streams</small>
+            <small>Active teaching staff</small>
           </article>
           <article class="stat-card">
-            <span class="stat-label">Attendance Accuracy</span>
+            <span class="stat-label">Accuracy</span>
             <strong>97.4%</strong>
-            <small>Updated daily</small>
+            <small>Attendance precision rate</small>
           </article>
           <article class="stat-card">
-            <span class="stat-label">Leave Requests</span>
+            <span class="stat-label">Requests</span>
             <strong>126</strong>
-            <small>Pending review this week</small>
+            <small>Monthly leave requests</small>
           </article>
         </div>
       </section>
@@ -117,38 +125,39 @@
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">System features</span>
-            <h3>Built for daily attendance operations</h3>
+            <h3>Built for daily academic operations</h3>
           </div>
+
           <div class="feature-grid">
             <article class="feature-card">
               <div class="icon">📚</div>
-              <h4>Period-wise Attendance</h4>
-              <p>Mark attendance class-by-class with each period tracked separately for accuracy.</p>
+              <h4>Period-wise attendance</h4>
+              <p>Track every class period individually and maintain accurate daily attendance logs.</p>
             </article>
             <article class="feature-card">
               <div class="icon">👨‍🎓</div>
-              <h4>Student Percentage Search</h4>
-              <p>Search by department and roll number to instantly view attendance percentage and status.</p>
+              <h4>Roll number search</h4>
+              <p>Students can check attendance percentage instantly using roll number and department.</p>
             </article>
             <article class="feature-card">
               <div class="icon">📱</div>
-              <h4>Parent SMS Alerts</h4>
-              <p>Automatic notifications are sent when a student records a leave or is absent.</p>
+              <h4>Parent messaging</h4>
+              <p>Leave details can be notified to the student’s parents via SMS or message alert.</p>
             </article>
             <article class="feature-card">
               <div class="icon">✅</div>
-              <h4>Faculty/Student Requests</h4>
-              <p>Leave requests move from student to faculty and faculty to admin for approval.</p>
+              <h4>Leave workflows</h4>
+              <p>Students submit to faculty; faculty submits to admin for secure approval tracking.</p>
             </article>
             <article class="feature-card">
               <div class="icon">🛡️</div>
-              <h4>Secure Backend</h4>
-              <p>Protected with role control, encrypted credentials, and session management.</p>
+              <h4>Secure backend design</h4>
+              <p>Role-based access, encrypted credentials, and protected admin functions are built in.</p>
             </article>
             <article class="feature-card">
               <div class="icon">📊</div>
-              <h4>Spreadsheet Export</h4>
-              <p>Export monthly or semester attendance records as CSV for analysis and reporting.</p>
+              <h4>Spreadsheet export</h4>
+              <p>Download attendance reports as CSV for monthly review and data analysis.</p>
             </article>
           </div>
         </div>
@@ -166,32 +175,31 @@
               <h4>Student Attendance Search</h4>
               <label>
                 <span>Department</span>
-                <select id="departmentSelect">
-                  <option value="CSE">Computer Science & Engineering</option>
-                  <option value="ECE">Electronics & Communication</option>
-                  <option value="EEE">Electrical & Electronics</option>
-                  <option value="MECH">Mechanical Engineering</option>
-                  <option value="IT">Information Technology</option>
+                <select>
+                  <option>CSE</option>
+                  <option>ECE</option>
+                  <option>EEE</option>
+                  <option>MECH</option>
                 </select>
               </label>
               <label>
                 <span>Roll Number</span>
-                <input id="rollNumberInput" type="text" value="CSE-204" />
+                <input type="text" value="CSE-204" />
               </label>
-              <button class="btn btn-primary full" id="searchStudentBtn">Search Attendance</button>
+              <a href="student.html" class="btn btn-primary full">Search Attendance</a>
 
-              <div class="student-summary" id="studentSummary">
+              <div class="student-summary">
                 <div class="summary-line">
                   <span>Student</span>
-                  <strong id="studentName">Aarav Kumar</strong>
+                  <strong>Aarav Kumar</strong>
                 </div>
                 <div class="summary-line">
-                  <span>Current Percentage</span>
-                  <strong id="studentPercent">88.2%</strong>
+                  <span>Attendance</span>
+                  <strong>88.2%</strong>
                 </div>
                 <div class="summary-line">
-                  <span>Attendance Status</span>
-                  <strong class="status good" id="studentStatus">Present</strong>
+                  <span>Status</span>
+                  <strong class="status good">Present</strong>
                 </div>
               </div>
             </aside>
@@ -200,22 +208,22 @@
               <div class="mini-grid">
                 <article class="mini-card success">
                   <span class="mini-label">Present</span>
-                  <strong id="presentCount">148</strong>
+                  <strong>148</strong>
                 </article>
                 <article class="mini-card warning">
                   <span class="mini-label">Absent</span>
-                  <strong id="absentCount">27</strong>
+                  <strong>27</strong>
                 </article>
                 <article class="mini-card danger">
                   <span class="mini-label">Leave</span>
-                  <strong id="leaveCount">11</strong>
+                  <strong>11</strong>
                 </article>
               </div>
 
-              <div class="table-wrap panel-card">
+              <div class="panel-card table-wrap">
                 <div class="table-header">
                   <h4>Class Attendance Register</h4>
-                  <button class="btn btn-secondary" id="exportCsvBtn">Export CSV</button>
+                  <a href="admin.html" class="btn btn-secondary">Export CSV</a>
                 </div>
                 <table>
                   <thead>
@@ -223,14 +231,55 @@
                       <th>Student</th>
                       <th>Roll No</th>
                       <th>Dept</th>
-                      <th>Period 1</th>
-                      <th>Period 2</th>
-                      <th>Period 3</th>
-                      <th>Period 4</th>
-                      <th>Attendance %</th>
+                      <th>P1</th>
+                      <th>P2</th>
+                      <th>P3</th>
+                      <th>P4</th>
+                      <th>%</th>
                     </tr>
                   </thead>
-                  <tbody id="attendanceTableBody"></tbody>
+                  <tbody>
+                    <tr>
+                      <td>Aarav Kumar</td>
+                      <td>CSE-204</td>
+                      <td>CSE</td>
+                      <td>P</td>
+                      <td>P</td>
+                      <td>A</td>
+                      <td>P</td>
+                      <td><span class="status good">75%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Harini S</td>
+                      <td>CSE-210</td>
+                      <td>CSE</td>
+                      <td>P</td>
+                      <td>A</td>
+                      <td>P</td>
+                      <td>P</td>
+                      <td><span class="status good">75%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Pooja M</td>
+                      <td>ECE-104</td>
+                      <td>ECE</td>
+                      <td>P</td>
+                      <td>A</td>
+                      <td>A</td>
+                      <td>P</td>
+                      <td><span class="status warning">50%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Sanjay V</td>
+                      <td>EEE-118</td>
+                      <td>EEE</td>
+                      <td>P</td>
+                      <td>P</td>
+                      <td>P</td>
+                      <td>P</td>
+                      <td><span class="status good">100%</span></td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -247,21 +296,21 @@
             </div>
             <label>
               <span>Student Name</span>
-              <input type="text" id="studentLeaveName" value="Aarav Kumar" />
+              <input type="text" value="Aarav Kumar" />
             </label>
             <label>
               <span>Department</span>
-              <select id="studentLeaveDept">
-                <option value="CSE">CSE</option>
-                <option value="ECE">ECE</option>
-                <option value="EEE">EEE</option>
+              <select>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
               </select>
             </label>
             <label>
               <span>Reason</span>
-              <textarea id="studentLeaveReason" rows="4">Medical treatment at home, doctor appointment.</textarea>
+              <textarea rows="4">Medical treatment at home, doctor appointment.</textarea>
             </label>
-            <button class="btn btn-primary full" id="sendStudentLeaveBtn">Send Leave Request</button>
+            <a href="leave.html" class="btn btn-primary full">Send Leave Request</a>
           </div>
 
           <div class="panel-card request-card">
@@ -271,30 +320,30 @@
             </div>
             <label>
               <span>Faculty Name</span>
-              <input type="text" id="facultyLeaveName" value="Dr. Ramya Nair" />
+              <input type="text" value="Dr. Ramya Nair" />
             </label>
             <label>
               <span>Department</span>
-              <select id="facultyLeaveDept">
-                <option value="CSE">CSE</option>
-                <option value="ECE">ECE</option>
-                <option value="EEE">EEE</option>
+              <select>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
               </select>
             </label>
             <label>
               <span>Reason</span>
-              <textarea id="facultyLeaveReason" rows="4">Family emergency and travel for official documentation.</textarea>
+              <textarea rows="4">Family emergency and travel for documentation work.</textarea>
             </label>
-            <button class="btn btn-primary full" id="sendFacultyLeaveBtn">Send to Admin</button>
+            <a href="leave.html" class="btn btn-primary full">Send to Admin</a>
           </div>
         </div>
       </section>
 
       <section class="security-section">
-        <div class="container security-panel panel-card">
+        <div class="container panel-card security-panel">
           <div>
             <span class="eyebrow">Security standards</span>
-            <h3>Protected for institutions and academic operations</h3>
+            <h3>Protected for institution operations</h3>
           </div>
           <div class="security-badges">
             <span>JWT Authentication</span>
@@ -313,33 +362,22 @@
             <span class="eyebrow">Contact</span>
             <h3>Institution contact details</h3>
             <ul>
-              <li><strong>Office:</strong> <span id="officeText">SKP Engineering College, Main Administrative Block</span></li>
-              <li><strong>Phone:</strong> <span id="phoneText">+91 98765 43210</span></li>
-              <li><strong>Email:</strong> <span id="emailText">support@skpengineering.edu.in</span></li>
-              <li><strong>Location:</strong> <span id="locationText">Tiruvannamalai, Tamil Nadu</span></li>
+              <li><strong>Office:</strong> SKP Engineering College, Main Administrative Block</li>
+              <li><strong>Phone:</strong> +91 98765 43210</li>
+              <li><strong>Email:</strong> support@skpengineering.edu.in</li>
+              <li><strong>Location:</strong> Tiruvannamalai, Tamil Nadu</li>
             </ul>
-            <button class="btn btn-secondary" id="editContactBtn">Edit Contact</button>
+            <a href="admin.html" class="btn btn-secondary">Edit Contact</a>
           </div>
 
-          <div class="panel-card admin-edit hidden" id="adminEditPanel">
-            <h4>Admin Contact Editor</h4>
-            <label>
-              <span>Office Address</span>
-              <input id="editOffice" type="text" value="SKP Engineering College, Main Administrative Block" />
-            </label>
-            <label>
-              <span>Phone</span>
-              <input id="editPhone" type="text" value="+91 98765 43210" />
-            </label>
-            <label>
-              <span>Email</span>
-              <input id="editEmail" type="email" value="support@skpengineering.edu.in" />
-            </label>
-            <label>
-              <span>Location</span>
-              <input id="editLocation" type="text" value="Tiruvannamalai, Tamil Nadu" />
-            </label>
-            <button class="btn btn-primary full" id="saveContactBtn">Save Changes</button>
+          <div class="panel-card contact-brief">
+            <h4>Why institutions choose SKP Engineering Attendance</h4>
+            <ul class="check-list">
+              <li>Daily class-by-class tracking</li>
+              <li>Student and teacher accountability</li>
+              <li>Consistent reporting for higher management</li>
+              <li>Reduced paperwork and manual attendance errors</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -351,7 +389,6 @@
         <span>Secure • Digital • Academic</span>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
+

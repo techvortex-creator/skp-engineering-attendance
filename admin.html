@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leave Requests | SKP Attendance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar dashboard-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="SKP home">
+          <img src="logo.svg" alt="SKP Logo" class="brand-logo" />
+          <div>
+            <span class="brand-kicker">SKP Group of Institutions</span>
+            <h1>SKP ENGINEERING ATTENDANCE</h1>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <a href="dashboard.html">Overview</a>
+          <a href="student.html">Student Search</a>
+          <a href="leave.html">Leave Requests</a>
+          <a href="admin.html">Admin Panel</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container leave-page-grid">
+        <section class="panel-card request-form">
+          <div class="section-heading left-align compact">
+            <span class="eyebrow">Student leave</span>
+            <h3>Send leave request to faculty</h3>
+          </div>
+
+          <label>
+            <span>Student Name</span>
+            <input id="studentLeaveName" type="text" value="Aarav Kumar" />
+          </label>
+
+          <label>
+            <span>Department</span>
+            <select id="studentLeaveDept">
+              <option>CSE</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Reason</span>
+            <textarea id="studentLeaveReason" rows="4">Medical treatment and doctor appointment.</textarea>
+          </label>
+
+          <button id="sendStudentLeave" class="btn btn-primary full">Submit Request</button>
+        </section>
+
+        <section class="panel-card request-form">
+          <div class="section-heading left-align compact">
+            <span class="eyebrow">Faculty leave</span>
+            <h3>Send leave request to admin</h3>
+          </div>
+
+          <label>
+            <span>Faculty Name</span>
+            <input id="facultyLeaveName" type="text" value="Dr. Ramya Nair" />
+          </label>
+
+          <label>
+            <span>Department</span>
+            <select id="facultyLeaveDept">
+              <option>CSE</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Reason</span>
+            <textarea id="facultyLeaveReason" rows="4">Family emergency and official travel requirements.</textarea>
+          </label>
+
+          <button id="sendFacultyLeave" class="btn btn-primary full">Send to Admin</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

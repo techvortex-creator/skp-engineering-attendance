@@ -1,702 +1,96 @@
-:root {
-  --bg: #f3f7fc;
-  --bg-soft: #edf4fb;
-  --panel: #ffffff;
-  --panel-alt: #f7f9fc;
-  --primary: #0f172a;
-  --primary-2: #1d4ed8;
-  --primary-3: #2563eb;
-  --accent: #dbeafe;
-  --success: #0f9f6e;
-  --warning: #d97706;
-  --danger: #dc2626;
-  --text: #1a2433;
-  --muted: #5a6980;
-  --line: rgba(15, 23, 42, 0.08);
-  --shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #eef5ff 0%, #f7f9fd 100%);
-  color: var(--text);
-}
-
-a {
-  text-decoration: none;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(1200px, calc(100% - 30px));
-  margin: 0 auto;
-}
-
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  min-height: 86px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.brand-logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 16px;
-}
-
-.brand-kicker {
-  margin: 0;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.brand h1 {
-  margin: 0;
-  font-size: clamp(1rem, 1.7vw, 1.4rem);
-  letter-spacing: 0.08em;
-  color: var(--primary);
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.main-nav a {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.btn {
-  border: 0;
-  border-radius: 12px;
-  padding: 0.9rem 1.3rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary-2), var(--primary));
-  color: white;
-  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.2);
-}
-
-.btn-secondary {
-  background: #eef4ff;
-  color: var(--primary);
-}
-
-.btn-ghost {
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  background: white;
-  color: var(--text);
-}
-
-.full {
-  width: 100%;
-}
-
-.hero {
-  padding: 4.5rem 0 2.5rem;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 34px;
-  align-items: center;
-}
-
-.eyebrow {
-  display: inline-block;
-  margin-bottom: 0.9rem;
-  font-weight: 800;
-  font-size: 0.76rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--primary-2);
-}
-
-.hero-copy h2 {
-  margin: 0;
-  font-size: clamp(2.3rem, 4vw, 4rem);
-  line-height: 1.08;
-  letter-spacing: -0.05em;
-  color: var(--primary);
-}
-
-.hero-copy p {
-  margin-top: 1rem;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--muted);
-  max-width: 600px;
-}
-
-.cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 1.5rem;
-}
-
-.hero-points {
-  list-style: none;
-  padding: 0;
-  margin: 1.7rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px 18px;
-  color: var(--text);
-  font-weight: 600;
-}
-
-.hero-points li::before {
-  content: "✓";
-  color: var(--success);
-  margin-right: 8px;
-}
-
-.panel-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-}
-
-.login-panel {
-  padding: 1.5rem;
-}
-
-.panel-top {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.status-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--success);
-  box-shadow: 0 0 0 5px rgba(15, 159, 110, 0.15);
-}
-
-.login-panel h3 {
-  margin: 1rem 0 1.3rem;
-  font-size: 2rem;
-}
-
-.auth-tabs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 1rem;
-}
-
-.auth-tab {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #f8fbff;
-  color: var(--text);
-  padding: 0.7rem 0.5rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.auth-tab.active {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
-
-label {
-  display: block;
-  margin-top: 0.95rem;
-}
-
-label span {
-  display: block;
-  margin-bottom: 0.45rem;
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  border-radius: 12px;
-  background: #fbfdff;
-  color: var(--text);
-  padding: 0.9rem 0.95rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: rgba(37, 99, 235, 0.45);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.09);
-}
-
-.google-btn {
-  margin-top: 0.8rem;
-  background: #f3f6fb;
-  color: var(--primary);
-}
-
-.tiny-note {
-  margin-top: 1rem;
-  color: var(--muted);
-  font-size: 0.74rem;
-  text-align: center;
-}
-
-.stats-section {
-  padding: 1.2rem 0 2rem;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.stat-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  padding: 1.4rem 1.2rem;
-}
-
-.stat-label {
-  display: block;
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.stat-card strong {
-  display: block;
-  margin-top: 0.75rem;
-  font-size: clamp(1.8rem, 2vw, 2.6rem);
-  letter-spacing: -0.06em;
-  color: var(--primary);
-}
-
-.stat-card small {
-  display: block;
-  margin-top: 0.5rem;
-  color: var(--muted);
-}
-
-.module-section,
-.dashboard-section,
-.leave-section,
-.security-section,
-.contact-section {
-  padding: 3rem 0;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 1.7rem;
-}
-
-.left-align {
-  text-align: left;
-}
-
-.compact {
-  margin-bottom: 1rem;
-}
-
-.section-heading h3 {
-  margin: 0;
-  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
-  color: var(--primary);
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.feature-card {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 1.4rem;
-  box-shadow: var(--shadow);
-}
-
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  font-size: 1.6rem;
-  background: linear-gradient(135deg, #dfeaff, #edf5ff);
-}
-
-.feature-card h4 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.15rem;
-  color: var(--primary);
-}
-
-.feature-card p {
-  margin: 0;
-  line-height: 1.7;
-  color: var(--muted);
-}
-
-.dashboard-layout {
-  display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 24px;
-}
-
-.search-panel,
-.request-card,
-.contact-info,
-.admin-edit {
-  padding: 1.4rem;
-}
-
-.search-panel h4,
-.request-card h3,
-.contact-info h3,
-.admin-edit h4 {
-  margin-top: 0;
-}
-
-.student-summary {
-  margin-top: 1.3rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
-}
-
-.summary-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 0.6rem;
-  color: var(--muted);
-}
-
-.summary-line strong {
-  color: var(--primary);
-}
-
-.status {
-  display: inline-block;
-  padding: 0.32rem 0.55rem;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  font-weight: 700;
-}
-
-.status.good {
-  background: rgba(15, 159, 110, 0.12);
-  color: var(--success);
-}
-
-.status.warning {
-  background: rgba(217, 119, 6, 0.12);
-  color: var(--warning);
-}
-
-.status.danger {
-  background: rgba(220, 38, 38, 0.12);
-  color: var(--danger);
-}
-
-.main-dashboard {
-  display: grid;
-  gap: 20px;
-}
-
-.mini-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.mini-card {
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 1.2rem 1rem;
-  background: white;
-  box-shadow: var(--shadow);
-}
-
-.mini-card.success {
-  background: linear-gradient(135deg, rgba(15, 159, 110, 0.08), rgba(15, 159, 110, 0.02));
-}
-
-.mini-card.warning {
-  background: linear-gradient(135deg, rgba(217, 119, 6, 0.08), rgba(217, 119, 6, 0.02));
-}
-
-.mini-card.danger {
-  background: linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(220, 38, 38, 0.02));
-}
-
-.mini-label {
-  display: block;
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.mini-card strong {
-  display: block;
-  margin-top: 0.7rem;
-  font-size: 2rem;
-  color: var(--primary);
-}
-
-.table-wrap {
-  padding: 1.2rem;
-}
-
-.table-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 0.8rem;
-}
-
-.table-header h4 {
-  margin: 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-thead th {
-  background: #f5f8ff;
-  color: var(--text);
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-align: left;
-  padding: 0.8rem 0.65rem;
-  border-bottom: 1px solid var(--line);
-}
-
-tbody td {
-  padding: 0.85rem 0.65rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--text);
-  font-size: 0.92rem;
-}
-
-.leave-grid,
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.request-card textarea {
-  resize: vertical;
-}
-
-.security-panel {
-  padding: 1.5rem 1.4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.security-panel h3 {
-  margin: 0;
-  font-size: clamp(1.6rem, 2vw, 2.2rem);
-}
-
-.security-badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.security-badges span {
-  display: inline-block;
-  padding: 0.7rem 0.9rem;
-  border-radius: 999px;
-  background: #edf4ff;
-  color: var(--primary);
-  font-weight: 700;
-  font-size: 0.8rem;
-}
-
-.contact-info ul {
-  list-style: none;
-  margin: 1rem 0 1.3rem;
-  padding: 0;
-  display: grid;
-  gap: 0.8rem;
-  color: var(--muted);
-}
-
-.contact-info strong {
-  color: var(--text);
-}
-
-.admin-edit {
-  display: none;
-}
-
-.admin-edit.visible {
-  display: block;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.site-footer {
-  padding: 1.25rem 0 2.2rem;
-}
-
-.footer-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  padding-top: 1rem;
-}
-
-@media (max-width: 980px) {
-  .hero-grid,
-  .dashboard-layout,
-  .leave-grid,
-  .contact-grid,
-  .feature-grid,
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .dashboard-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .security-panel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 760px) {
-  .nav-wrap {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.8rem 0;
-  }
-
-  .main-nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-grid,
-  .feature-grid,
-  .stats-grid,
-  .leave-grid,
-  .contact-grid,
-  .security-badges {
-    grid-template-columns: 1fr;
-    display: grid;
-  }
-
-  .hero-points {
-    grid-template-columns: 1fr;
-  }
-
-  .mini-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .table-wrap {
-    overflow-x: auto;
-  }
-
-  table {
-    min-width: 760px;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | SKP Attendance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar dashboard-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="SKP home">
+          <img src="logo.svg" alt="SKP Logo" class="brand-logo" />
+          <div>
+            <span class="brand-kicker">SKP Group of Institutions</span>
+            <h1>SKP ENGINEERING ATTENDANCE</h1>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <a href="dashboard.html">Overview</a>
+          <a href="student.html">Student Search</a>
+          <a href="leave.html">Leave Requests</a>
+          <a href="admin.html">Admin Panel</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container admin-shell">
+        <section class="panel-card admin-card">
+          <div class="admin-card-header">
+            <div>
+              <span class="eyebrow">Admin panel</span>
+              <h3>Leave approvals and contact management</h3>
+            </div>
+            <button id="adminEditToggle" class="btn btn-secondary">Edit Contact</button>
+          </div>
+
+          <div class="admin-grid">
+            <div class="approval-list">
+              <h4>Pending Requests</h4>
+              <ul>
+                <li>
+                  <strong>Aarav Kumar</strong>
+                  <span>Medical treatment</span>
+                  <button>Approve</button>
+                </li>
+                <li>
+                  <strong>Riya Thomas</strong>
+                  <span>Family emergency</span>
+                  <button>Approve</button>
+                </li>
+                <li>
+                  <strong>Dr. Ramya Nair</strong>
+                  <span>Official travel</span>
+                  <button>Approve</button>
+                </li>
+              </ul>
+            </div>
+
+            <div id="adminContactPanel" class="admin-contact panel-card hidden">
+              <h4>Institution Contact Editor</h4>
+              <label>
+                <span>Office</span>
+                <input id="contactOffice" type="text" value="SKP Engineering College, Main Administrative Block" />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input id="contactPhone" type="text" value="+91 98765 43210" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input id="contactEmail" type="email" value="support@skpengineering.edu.in" />
+              </label>
+              <label>
+                <span>Location</span>
+                <input id="contactLocation" type="text" value="Tiruvannamalai, Tamil Nadu" />
+              </label>
+              <button id="saveContactBtn" class="btn btn-primary full">Save Changes</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKP Login | Attendance Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-shell">
+      <div class="auth-panel panel-card">
+        <div class="auth-brand">
+          <img src="logo.svg" alt="SKP Logo" class="brand-logo" />
+          <div>
+            <p class="brand-kicker">SKP Group of Institutions</p>
+            <h2>SKP ENGINEERING ATTENDANCE</h2>
+          </div>
+        </div>
+
+        <div class="auth-segment">
+          <div class="login-tab-group">
+            <button class="tab-btn active" type="button" data-role="admin">Admin</button>
+            <button class="tab-btn" type="button" data-role="faculty">Faculty</button>
+            <button class="tab-btn" type="button" data-role="student">Student</button>
+          </div>
+
+          <label>
+            <span>Email or Institute ID</span>
+            <input id="authEmail" type="text" placeholder="admin@skpengineering.edu.in" />
+          </label>
+
+          <label>
+            <span>Password</span>
+            <input id="authPassword" type="password" placeholder="••••••••" />
+          </label>
+
+          <button id="loginSubmit" class="btn btn-primary full">Login Securely</button>
+          <button id="gmailLogin" class="btn btn-secondary full auth-google">Continue with Gmail</button>
+        </div>
+
+        <div class="auth-footer-links">
+          <a href="index.html">Back to Home</a>
+          <a href="student.html">Student Portal</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

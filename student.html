@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | SKP Attendance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar dashboard-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="SKP home">
+          <img src="logo.svg" alt="SKP Logo" class="brand-logo" />
+          <div>
+            <span class="brand-kicker">SKP Group of Institutions</span>
+            <h1>SKP ENGINEERING ATTENDANCE</h1>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <a href="dashboard.html">Overview</a>
+          <a href="student.html">Student Search</a>
+          <a href="leave.html">Leave Requests</a>
+          <a href="admin.html">Admin Panel</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container dashboard-shell">
+        <aside class="sidebar panel-card">
+          <h3>Control Panel</h3>
+          <ul>
+            <li class="active"><a href="dashboard.html">Overview</a></li>
+            <li><a href="student.html">Student Attendance</a></li>
+            <li><a href="leave.html">Leave Management</a></li>
+            <li><a href="admin.html">Admin Settings</a></li>
+          </ul>
+        </aside>
+
+        <div class="main-content">
+          <section class="stats-grid overview-grid">
+            <article class="stat-card">
+              <span class="stat-label">Total Students</span>
+              <strong>4820</strong>
+              <small>Across 18 departments</small>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Present</span>
+              <strong>148</strong>
+              <small>Current class count</small>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Absent</span>
+              <strong>27</strong>
+              <small>Needs follow-up</small>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Leaves</span>
+              <strong>11</strong>
+              <small>Pending review</small>
+            </article>
+          </section>
+
+          <section class="panel-card table-wrap table-panel">
+            <div class="table-header">
+              <h3>Daily Attendance Register</h3>
+              <button class="btn btn-secondary export-btn">Export CSV</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Roll No</th>
+                  <th>Department</th>
+                  <th>P1</th>
+                  <th>P2</th>
+                  <th>P3</th>
+                  <th>P4</th>
+                  <th>Attendance %</th>
+                </tr>
+              </thead>
+              <tbody id="attendanceTable">
+                <tr>
+                  <td>Aarav Kumar</td>
+                  <td>CSE-204</td>
+                  <td>CSE</td>
+                  <td>P</td>
+                  <td>P</td>
+                  <td>A</td>
+                  <td>P</td>
+                  <td><span class="status good">75%</span></td>
+                </tr>
+                <tr>
+                  <td>Harini S</td>
+                  <td>CSE-210</td>
+                  <td>CSE</td>
+                  <td>P</td>
+                  <td>A</td>
+                  <td>P</td>
+                  <td>P</td>
+                  <td><span class="status good">75%</span></td>
+                </tr>
+                <tr>
+                  <td>Nikhil R</td>
+                  <td>CSE-221</td>
+                  <td>CSE</td>
+                  <td>A</td>
+                  <td>P</td>
+                  <td>P</td>
+                  <td>P</td>
+                  <td><span class="status good">75%</span></td>
+                </tr>
+                <tr>
+                  <td>Pooja M</td>
+                  <td>ECE-104</td>
+                  <td>ECE</td>
+                  <td>P</td>
+                  <td>A</td>
+                  <td>A</td>
+                  <td>P</td>
+                  <td><span class="status warning">50%</span></td>
+                </tr>
+                <tr>
+                  <td>Sanjay V</td>
+                  <td>EEE-118</td>
+                  <td>EEE</td>
+                  <td>P</td>
+                  <td>P</td>
+                  <td>P</td>
+                  <td>P</td>
+                  <td><span class="status good">100%</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

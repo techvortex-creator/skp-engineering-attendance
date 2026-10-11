@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal | SKP Attendance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar dashboard-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="SKP home">
+          <img src="logo.svg" alt="SKP Logo" class="brand-logo" />
+          <div>
+            <span class="brand-kicker">SKP Group of Institutions</span>
+            <h1>SKP ENGINEERING ATTENDANCE</h1>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <a href="dashboard.html">Overview</a>
+          <a href="student.html">Student Search</a>
+          <a href="leave.html">Leave Requests</a>
+          <a href="admin.html">Admin Panel</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container student-portal">
+        <section class="panel-card student-search-panel">
+          <div class="section-heading left-align compact">
+            <span class="eyebrow">Student portal</span>
+            <h3>Search attendance by department and roll number</h3>
+          </div>
+
+          <div class="grid-two">
+            <label>
+              <span>Department</span>
+              <select id="studentDept">
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Roll Number</span>
+              <input id="studentRoll" type="text" value="CSE-204" />
+            </label>
+          </div>
+
+          <button id="searchStudentBtn" class="btn btn-primary">Search</button>
+        </section>
+
+        <section class="panel-card student-result">
+          <div class="result-header">
+            <div>
+              <span class="eyebrow">Student record</span>
+              <h3 id="studentName">Aarav Kumar</h3>
+            </div>
+            <span id="studentBadge" class="status good">Present</span>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-item">
+              <span>Department</span>
+              <strong id="detailDept">CSE</strong>
+            </div>
+            <div class="result-item">
+              <span>Roll No</span>
+              <strong id="detailRoll">CSE-204</strong>
+            </div>
+            <div class="result-item">
+              <span>Attendance%</span>
+              <strong id="detailPercent">88.2%</strong>
+            </div>
+            <div class="result-item">
+              <span>Leave Status</span>
+              <strong id="detailLeave">No leave</strong>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
